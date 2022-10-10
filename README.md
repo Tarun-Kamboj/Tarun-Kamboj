@@ -18,9 +18,6 @@
   <a href="https://twitter.com/TarunKamboj_">
     <img height="40px" src="Images/Static/twitter.png" title="Twitter">
   </a>
-  <a href="https://wa.me/919466416667">
-    <img height="40px" src="Images/Static/whatsapp.png" title="WhatsApp">
-  </a>
   <a href="https://discord.com/users/724826268645851157">
     <img height="40px" src="Images/Static/discord.png" title="Discord">
   </a>
