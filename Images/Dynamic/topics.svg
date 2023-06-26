@@ -37,8 +37,8 @@
                             <div class="label" title="The GitHub API allows you to build applications that integrate with GitHub.">github api</div>
                             <div class="label" title="Front end is the programming and layout that people see and interact with.">front end</div>
                             <div class="label" title="The terminal is an interface in which you can type and execute text-based commands.">terminal</div>
-                            <div class="label" title="TensorFlow is an open source software library for numerical computation.">tensorflow</div>
                             <div class="label" title="Jupyter Notebooks are documents that contain live code, visualizations, and narrative text.">jupyter notebook</div>
+                            <div class="label" title="TensorFlow is an open source software library for numerical computation.">tensorflow</div>
                             <div class="label" title="Firebase is a mobile app development platform that provides data analysis and database web services for developers.">firebase</div>
                             <div class="label" title="Markdown is a lightweight markup language.">markdown</div>
                             <div class="label" title="scikit-learn is a Python module for machine learning.">scikit-learn</div>
