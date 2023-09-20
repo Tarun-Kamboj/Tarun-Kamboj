@@ -41,8 +41,8 @@
                             <div class="label" title="TensorFlow is an open source software library for numerical computation.">tensorflow</div>
                             <div class="label" title="Firebase is a mobile app development platform that provides data analysis and database web services for developers.">firebase</div>
                             <div class="label" title="Markdown is a lightweight markup language.">markdown</div>
-                            <div class="label" title="scikit-learn is a Python module for machine learning.">scikit-learn</div>
                             <div class="label" title="Documentation is a set of information that describes a product to its users.">documentation</div>
+                            <div class="label" title="scikit-learn is a Python module for machine learning.">scikit-learn</div>
                             <div class="label" title="A web application is any computer program that performs a specific function by using a web browser as its client.">web app</div>
                         </div>
                     </section>
