@@ -6,43 +6,15 @@ on:
   workflow_dispatch:
 
 jobs:
-  # isocalendar:
-  #   runs-on: ubuntu-latest
-  #   name: isocalendar
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - uses: yoshi389111/github-images@0.7.1
-  #       env:
-  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  #         USERNAME: ${{ github.repository_owner }}
-  #     - name: Commit & Push
-  #       run: |
-  #         git config user.name github-actions
-  #         git config user.email github-actions@github.com
-  #         git add -A .
-  #         git commit -m "generated"
-  #         git push
-
   metrics:
     runs-on: ubuntu-latest
     steps:
-      # # stats
-      # - name: stats
-      #   uses: lowlighter/metrics@latest
-      #   with:
-      #     filename: images/stats.svg
-      #     token: ${{ secrets.METRICS_TOKEN }}
-      #     committer_token: ${{ secrets.GITHUB_TOKEN }}
-      #     base: header, activity, community, repositories
-      #     plugin_lines: yes
-
       # achievements
       - name: achievements
         uses: lowlighter/metrics@latest
         with:
           filename: images/achievements.svg
           token: ${{ secrets.METRICS_TOKEN }}
-          committer_token: ${{ secrets.GITHUB_TOKEN }}
           base: ""
           plugin_achievements: yes
           plugin_achievements_threshold: C       
@@ -56,12 +28,9 @@ jobs:
         with:
           filename: images/languages.svg
           token: ${{ secrets.METRICS_TOKEN }}
-          committer_token: ${{ secrets.GITHUB_TOKEN }}
           base: ""
           plugin_languages: yes
-          plugin_languages_ignored: python
-          plugin_languages_colors: "jupyter notebook:#58a6ff, html:#ff3a3a, css:#7d6cff, scss:#ff48bd, ..."
-          plugin_languages_aliases: "jupyter notebook:Python, ..."
+          plugin_languages_colors: "html:#ff3a3a, css:#7d6cff, scss:#ff48bd, ..."
           plugin_languages_sections: most-used #, recently-used
           plugin_languages_details: percentage
           plugin_languages_categories: data, markup, programming, prose
@@ -72,9 +41,32 @@ jobs:
         with:
           filename: images/contribs.svg
           token: ${{ secrets.METRICS_TOKEN }}
-          committer_token: ${{ secrets.GITHUB_TOKEN }}
           base: ""
           plugin_notable: yes
+
+      # joke screenshot
+      - name: joke
+        uses: lowlighter/metrics@latest
+        with:
+          filename: images/joke.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_screenshot: yes
+          plugin_screenshot_title: Joke of the day
+          plugin_screenshot_url: https://readme-jokes.vercel.app/api?bgColor=%23fff&hideBorder&textColor=%23000&qColor=%23000&aColor=%2325b
+          plugin_screenshot_selector: ".container" 
+          plugin_screenshot_background: no
+          config_padding: 0, 8 + 5%
+
+      # # stats
+      # - name: stats
+      #   uses: lowlighter/metrics@latest
+      #   with:
+      #     filename: images/stats.svg
+      #     token: ${{ secrets.METRICS_TOKEN }}
+      #     committer_token: ${{ secrets.GITHUB_TOKEN }}
+      #     base: header, activity, community, repositories
+      #     plugin_lines: yes
 
       # # isocalendar
       # - name: isocalendar
@@ -177,21 +169,6 @@ jobs:
       #     plugin_screenshot_background: no
       #     config_padding: 0, 8 + 1%
 
-      # joke screenshot
-      - name: joke
-        uses: lowlighter/metrics@latest
-        with:
-          filename: images/joke.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          committer_token: ${{ secrets.GITHUB_TOKEN }}
-          base: ""
-          plugin_screenshot: yes
-          plugin_screenshot_title: Joke of the day
-          plugin_screenshot_url: https://readme-jokes.vercel.app/api?bgColor=%23fff&hideBorder&textColor=%23000&qColor=%23000&aColor=%2325b
-          plugin_screenshot_selector: ".container" 
-          plugin_screenshot_background: no
-          config_padding: 0, 8 + 5%
-
       # # meme screenshot
       # - name: meme
       #   uses: lowlighter/metrics@latest
@@ -206,3 +183,20 @@ jobs:
       #     plugin_screenshot_selector: ".g1-frame-inner" 
       #     plugin_screenshot_background: no
       #     config_padding: 0, 8 + 1%
+
+  # isocalendar:
+  #   runs-on: ubuntu-latest
+  #   name: isocalendar
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - uses: yoshi389111/github-images@0.7.1
+  #       env:
+  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #         USERNAME: ${{ github.repository_owner }}
+  #     - name: Commit & Push
+  #       run: |
+  #         git config user.name github-actions
+  #         git config user.email github-actions@github.com
+  #         git add -A .
+  #         git commit -m "generated"
+  #         git push
