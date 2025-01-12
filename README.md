@@ -4,5 +4,5 @@
   <img width="100%" src="images/achievements.svg">
   <img width="100%" src="images/languages.svg">
   <img width="100%" src="images/contribs.svg">
-  <img width="600px" src="images/joke.svg">
+  <img width="100%" src="images/joke.svg">
 </p>
